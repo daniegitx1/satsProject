@@ -1,0 +1,35 @@
+@media (max-width: 868px) {
+  .flex-item {
+    flex-basis: 100%; /* Full width on smaller screens */
+  }
+}
+
+.red-bold {
+    font-weight: bold;
+    color: red;
+}
+
+.h2, h2 {
+    margin-top: 1rem;
+    line-height: 0.1;
+    font-size: 22px;
+  font-family: "Aptos", Arial, sans-serif;
+}
+
+.styled-div {
+        border: 1px solid #000; /* 1px solid black border */
+        border-radius: 6px; /* Rounded corners with a 6px radius */
+        padding: 10px; /* Add some padding inside the div */
+        margin: 20px;
+        /* You can add more styles here (e.g., background color, font, etc.) */
+    }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+  }
+  .flex-item {
+/*    flex: 1;  Equal width for both items */
+    padding: 10px;
+    /* Additional styling for each item */
+  }

@@ -1,0 +1,42 @@
+{% load static %}
+<!-- sats/templates/sats/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin to ZAR Converter</title>
+    <!-- Add any CSS stylesheets or other meta tags here -->
+    <link rel="stylesheet" href="{% static 'custom.css' %}">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    
+
+</head>
+<{% load static %}
+<!-- sats/templates/sats/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin to ZAR Converter</title>
+    <!-- Add any CSS stylesheets or other meta tags here -->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="{% static 'custom.css' %}">
+
+</head>
+<body>
+    <div class="styled-div flex-container">
+        <div class="flex-item"><h2>The Hub Bitcoin Stash</h2>
+        <p>
+        <p>Total sats in the Speed account: {{ speed_balance }}</p>
+        <p>Current value: <span class="red-bold">R{{ zar_value|floatformat:2 }}</span></p>
+        <div class="flex-item"></div>
+
+    </div>
+</body>
+</html>
+
+
