@@ -1,4 +1,5 @@
 {% load static %}
+{% load humanize %}
 <!-- sats/templates/sats/index.html -->
 
 <!DOCTYPE html>
@@ -14,6 +15,7 @@
 
 </head>
 <{% load static %}
+
 <!-- sats/templates/sats/index.html -->
 
 <!DOCTYPE html>
@@ -28,14 +30,35 @@
 
 </head>
 <body>
-    <div class="styled-div flex-container">
-        <div class="flex-item"><h2>The Village Hub</h2>
-        <p>
-        <p>Total sats in the Speed account: {{ speed_balance }}</p>
-        <p>Current value: <span class="red-bold">R{{ zar_value|floatformat:2 }}</span></p>
-        <div class="flex-item"></div>
+<p></p><br>
+<div class="styled-div">
+    <h2>The Village Hub</h2>
+    <p></p>
+    <p>Total sats in the Speed account: {{ speed_balance }}</p>
+    <p>Current value: <span class="red-bold">R{{ zar_value|floatformat:2 }}</span></p>
+    <p></p>
+</div>
+          
 
-    </div>
+<div class="styled-div">
+    <h2>Sats Converter</h2>
+    <p></p>
+    <form method="post"> 
+        {% csrf_token %}
+        <p><input type="number" id="satsinput" name="satsinput"></p>
+        <p><button type="submit">Calculate</button></p>
+        <p>Current value of {{ btc_amount3 }} sats: <span class="red-bold">R{{ zar_value2|floatformat:2 }}</span></p>
+    </form>
+</div>    
+
+<div class="styled-div">
+    <h2>Bitcoin Price</h2>
+    <p></p>
+    <p>Current value: <span class="red-bold">R{{ zar_value3 }}</span></p>
+    <p></p>
+</div>
+
+    
 </body>
 </html>
 
