@@ -14,7 +14,7 @@
     
 
 </head>
-<{% load static %}
+{% load static %}
 
 <!-- sats/templates/sats/index.html -->
 
@@ -45,14 +45,14 @@
     <p></p>
     <form method="post"> 
         {% csrf_token %}
-        <p><input type="number" id="satsinput" name="satsinput"></p>
+        <p><input type="number" id="satsinput" name="satsinput"> sats</p>
         <p><button type="submit">Calculate</button></p>
         <p>Current value of {{ btc_amount3 }} sats: <span class="red-bold">R{{ zar_value2|floatformat:2 }}</span></p>
     </form>
 </div>    
 
 <div class="styled-div">
-    <h2>Bitcoin Price</h2>
+    <h2>Bitcoin price today:</h2>
     <p></p>
     <p>Current value: <span class="red-bold">R{{ zar_value3 }}</span></p>
     <p></p>

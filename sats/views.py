@@ -24,9 +24,11 @@ def index(request):
         btc_amount2 = float(satsinput)
         btc_amount2 = Decimal(btc_amount2) / Decimal(100000000)
         btc_amount3 = int(btc_amount2*100000000)
+
     else:
         btc_amount2 = 0
         btc_amount3 = 0
+
 
     # Get ZAR price
     zar_price = get_bitcoin_price()
@@ -35,7 +37,7 @@ def index(request):
     zar_value = btc_amount * zar_price
     zar_value2 = btc_amount2 * zar_price
     zar_value3 = zar_price
-
+    
     context = {'zar_value': zar_value, 'zar_value2': zar_value2, 'zar_value3': zar_value3, 'btc_amount3': btc_amount3, 'speed_balance': int(speed_balance),}
     return render(request, 'sats/index.html', context)
 
