@@ -134,3 +134,5 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 USE_THOUSAND_SEPARATOR = 'True'
+
+CSRF_TRUSTED_ORIGINS = [ "https://ivan.danie.capetown" ]

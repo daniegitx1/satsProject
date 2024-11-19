@@ -14,7 +14,7 @@
     
 
 </head>
-<{% load static %}
+{% load static %}
 
 <!-- sats/templates/sats/index.html -->
 
@@ -32,29 +32,18 @@
 <body>
 <p></p><br>
 <div class="styled-div">
-    <h2>The Village Hub</h2>
-    <p></p>
-    <p>Total sats in the Speed account: {{ speed_balance }}</p>
+    <h2>Hub: Speed Account</h2>
+    
+    <p>Total sats: <span class="red-bold">{{ speed_balance }}</span></p>
     <p>Current value: <span class="red-bold">R{{ zar_value|floatformat:2 }}</span></p>
     <p></p>
 </div>
           
 
 <div class="styled-div">
-    <h2>Sats Converter</h2>
+    <h2>Bitcoin price today:</h2>
     <p></p>
-    <form method="post"> 
-        {% csrf_token %}
-        <p><input type="number" id="satsinput" name="satsinput"></p>
-        <p><button type="submit">Calculate</button></p>
-        <p>Current value of {{ btc_amount3 }} sats: <span class="red-bold">R{{ zar_value2|floatformat:2 }}</span></p>
-    </form>
-</div>    
-
-<div class="styled-div">
-    <h2>Bitcoin Price</h2>
-    <p></p>
-    <p>Current value: <span class="red-bold">R{{ zar_value3 }}</span></p>
+    <p>Current value 1 Bitcoin: <span class="red-bold">R{{ zar_value3 }}</span></p>
     <p></p>
 </div>
 

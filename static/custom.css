@@ -33,3 +33,7 @@
     padding: 10px;
     /* Additional styling for each item */
   }
+
+  body {
+   background-color: #FFFFFF;
+}
